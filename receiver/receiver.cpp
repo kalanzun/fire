@@ -9,7 +9,9 @@ Receiver::Receiver(Fire *fire, QObject *parent)
     connect(timer, &QTimer::timeout, this, &Receiver::timeout);
 
     connect(tcpSocket, &QIODevice::readyRead, this, &Receiver::read);
-    connect(tcpSocket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error), this, &Receiver::error);
+    connect(tcpSocket, static_cast<void (QTcpSocket::*)(QAbstractSocket::SocketError)>(&QAbstractSocket::error), this, &Receiver::error);
+    //Only Qt >= 5.7 (Ubuntu Xenial on Travis is Qt 5.5)
+    //connect(tcpSocket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error), this, &Receiver::error);
 
     connect(fire, &Fire::connectToHost, this, &Receiver::connectToHost);
 
