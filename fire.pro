@@ -20,32 +20,32 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs depr
 CONFIG += c++11
 
 SOURCES += \
-    src/main.cpp \
-    src/monitor.cpp \
-    src/fire.cpp \
-    src/temperature.cpp \
-    src/percentage.cpp \
-    src/state.cpp \
-    src/card.cpp \
-    src/receiver.cpp \
-    src/variable.cpp \
-    src/addressbar.cpp \
-    src/errorpage.cpp
+    app/main.cpp \
+    model/fire.cpp \
+    model/percentage.cpp \
+    model/state.cpp \
+    model/temperature.cpp \
+    model/variable.cpp \
+    monitor/addressbar.cpp \
+    monitor/card.cpp \
+    monitor/errorpage.cpp \
+    monitor/monitor.cpp \
+    receiver/receiver.cpp
 
 HEADERS += \
-    src/monitor.h \
-    src/fire.h \
-    src/temperature.h \
-    src/percentage.h \
-    src/state.h \
-    src/card.h \
-    src/receiver.h \
-    src/variable.h \
-    src/addressbar.h \
-    src/errorpage.h
+    model/fire.h \
+    model/percentage.h \
+    model/state.h \
+    model/temperature.h \
+    model/variable.h \
+    monitor/addressbar.h \
+    monitor/card.h \
+    monitor/errorpage.h \
+    monitor/monitor.h \
+    receiver/receiver.h
 
 FORMS += \
-    src/monitor.ui
+    monitor/monitor.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

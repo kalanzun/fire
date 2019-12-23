@@ -1,7 +1,7 @@
 #ifndef ADDRESSBAR_H
 #define ADDRESSBAR_H
 
-#include "fire.h"
+#include "model/fire.h"
 
 #include <QWidget>
 #include <QLineEdit>

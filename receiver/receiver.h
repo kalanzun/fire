@@ -1,7 +1,7 @@
 #ifndef RECEIVER_H
 #define RECEIVER_H
 
-#include "fire.h"
+#include "model/fire.h"
 
 #include <QObject>
 #include <QTcpSocket>

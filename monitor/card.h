@@ -1,7 +1,7 @@
 #ifndef CARD_H
 #define CARD_H
 
-#include "variable.h"
+#include "model/variable.h"
 
 #include <QSvgWidget>
 #include <QLabel>

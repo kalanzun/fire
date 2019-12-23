@@ -2,7 +2,7 @@
 #define MONITOR_H
 
 #include "card.h"
-#include "fire.h"
+#include "model/fire.h"
 
 #include <QMainWindow>
 #include <QStackedWidget>

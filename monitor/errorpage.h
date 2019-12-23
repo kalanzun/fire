@@ -1,7 +1,7 @@
 #ifndef ERRORPAGE_H
 #define ERRORPAGE_H
 
-#include "fire.h"
+#include "model/fire.h"
 
 #include <QObject>
 #include <QWidget>

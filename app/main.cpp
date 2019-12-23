@@ -1,6 +1,6 @@
-#include "fire.h"
-#include "receiver.h"
-#include "monitor.h"
+#include "model/fire.h"
+#include "receiver/receiver.h"
+#include "monitor/monitor.h"
 #include <QApplication>
 #include <QSettings>
 
