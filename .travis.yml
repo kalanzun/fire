@@ -1,0 +1,27 @@
+if: tag IS present
+language: cpp
+compiler: gcc
+os:
+- linux
+- osx
+dist: xenial
+addons:
+  homebrew:
+    packages:
+    - qt5
+    update: true
+  apt:
+    packages:
+    - qt5-default
+    - libqt5svg5-dev
+script:
+- python build.py
+deploy:
+  provider: releases
+  api_key:
+    secure: julJJ0BopV7AIYR4IRf+N9XLlAphiZY5Qd47J9n0dVfJuW4c7V/fALmE8QWm9A6+y00cWbCCn/QEXQblWiHlpb6AGyc/Sd2vGkzQ5qPxjKTJu4WFv8iB9rEWrgxlzSYzN0btfkPuXekNVoJPgvoskisShbN8tErCCXfuZiDlCCaKhBE1NBFW2YpB4jpTJG+s153GCfWB+ys9A/knlS+TG34QWUOPcNjAPkbxHK6wsW3nlIcKTx7gghqr0os/dKeRdfBpsGaAA4m36fxjex+hrpqZjACCPBMfio7OqMubtDjVd60IajbEQ0jr+hmxowPxvzeKtsNFIAVICaqac+MDjsL/AgEitER0o8zjxVPV7Xffa9sMdcevO6LauOf4m5fVHg3FovG2hfED6raZ3IuC4Roaj0sV6/VTZlH4S1kP7DcdCQd8JuiQCDDzgDSZebDrc2Rhtqw8vSENNWYXWB9luoGxd/A4ua4lClwOsMaYfIVD2h04SuEWEMFIe12e9aa+0SicbuntNZ5Yu67EQWXkyWs2Jo/48sc1yYd0/F+0E/kcwKCH0YzNKJtvARereHrLUx5dMTTgAKfdTX6rIxMAeGGupTWbmD1En8lCC0+JbnuHBVsLbrwjI9h1ae/1UKCUqbnVl92+MdlYQ43PSwS41S/PlClKg4Gzcbv+ghMw+F0=
+  file_glob: true
+  file: Fire-*
+  skip_cleanup: true
+  on:
+    tags: true
