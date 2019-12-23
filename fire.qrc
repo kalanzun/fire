@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/fire.svg</file>
+        <file>icons/level0.svg</file>
+        <file>icons/level1.svg</file>
+        <file>icons/level2.svg</file>
+        <file>icons/level3.svg</file>
+        <file>icons/level4.svg</file>
+        <file>icons/temp0.svg</file>
+        <file>icons/temp1.svg</file>
+        <file>icons/temp2.svg</file>
+        <file>icons/temp3.svg</file>
+        <file>icons/temp4.svg</file>
+    </qresource>
+</RCC>
