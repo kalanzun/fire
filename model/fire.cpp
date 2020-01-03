@@ -19,9 +19,9 @@ Fire::Fire(QObject *parent)
     variables.append(new Temperature(QString("Boiler"), 12, 5, -7, this));
     variables.append(new Temperature(QString("Vorlauf"), 8, 5, -7, this));
 
-    variables.append(new Temperature(QString("Puffer Unten"), 4, 5, -7, this));
+    variables.append(new Temperature(QString("Puffer Oben"), 4, 5, -7, this));
     variables.append(new Temperature(QString("Puffer Mitte"), 5, 5, -7, this));
-    variables.append(new Temperature(QString("Puffer Oben"), 6, 5, -7, this));
+    variables.append(new Temperature(QString("Puffer Unten"), 6, 5, -7, this));
 
     //variables.append(new State(QString("Zustand"), 4, this));
 
