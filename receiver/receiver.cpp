@@ -37,10 +37,17 @@ void Receiver::read()
 
     QVector<QStringRef> data = raw_data.splitRef(" ");
 
-    fire->parse(data);
+    // sometimes, it just reads "0 \r\n"
+    if (data.size() > 2) {
+        fire->parse(data);
 
-    watchdog = true;
-    connecting = false;
+        watchdog = true;
+        connecting = false;
+    }
+
+    // else {
+    //    qDebug() << "ignore";
+    // }
 }
 
 void Receiver::error(QAbstractSocket::SocketError socketError)
